@@ -1,0 +1,117 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De la Paz - Accesorios Artesanales</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <h1>De la Paz</h1>
+                </div>
+                <ul>
+                    <li><a href="https://abalorios-mar.com/pulseras">Pulseras</a></li>
+                    <li><a href="https://abalorios-mar.com/collares">Collares</a></li>
+                    <li><a href="#" id="cart-toggle">Carrito <span id="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Accesorios<br><span class="subtitle">Únicos</span></h1>
+                    <p>Diseños artesanales que cuentan historias</p>
+                    <a href="https://abalorios-del-mar.com/catalogo" class="cta-button">Explorar Colección</a>
+                </div>
+                <div class="hero-image">
+                    <svg class="jewelry-illustration" viewBox="0 0 300 200">
+                        <path d="M100,50 C150,100 200,50 250,100" stroke="#8a4b38" fill="none" stroke-width="3"/>
+                        <circle cx="100" cy="50" r="10" fill="#c1694f"/>
+                        <circle cx="250" cy="100" r="10" fill="#c1694f"/>
+                    </svg>
+                </div>
+            </section>
+
+            <section class="products">
+                <h2>Nuestra Colección</h2>
+                <div class="product-grid">
+                    <div class="product-card" data-product-id="1" data-product-name="Pulsera Elegante" data-product-price="25000">
+                        <div class="product-card-inner">
+                            <svg viewBox="0 0 200 200" class="product-svg">
+                                <path d="M50,100 C70,80 90,70 110,80 C130,90 150,100 170,90" 
+                                      stroke="#8a4b38" stroke-width="5" fill="none"/>
+                                <circle cx="60" cy="100" r="10" fill="#8a4b38"/>
+                                <circle cx="180" cy="90" r="10" fill="#8a4b38"/>
+                                <path d="M50,100 Q80,120 110,110 Q140,100 170,90" 
+                                      stroke="#c1694f" stroke-width="3" fill="none"/>
+                            </svg>
+                            <div class="product-details">
+                                <h3>Pulseras</h3>
+                                <p>Diseños artesanales exclusivos</p>
+                                <p class="price">$25.000</p>
+                            </div>
+                            <button class="add-to-cart">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-product-id="2" data-product-name="Collar Signature" data-product-price="35000">
+                        <div class="product-card-inner">
+                            <svg viewBox="0 0 200 200" class="product-svg">
+                                <path d="M100,50 Q50,100 100,150 Q150,100 100,50" 
+                                      fill="none" stroke="#8a4b38" stroke-width="5"/>
+                                <circle cx="100" cy="30" r="10" fill="#c1694f"/>
+                                <circle cx="100" cy="170" r="10" fill="#c1694f"/>
+                                <path d="M80,100 Q100,80 120,100" 
+                                      fill="none" stroke="#c1694f" stroke-width="3"/>
+                            </svg>
+                            <div class="product-details">
+                                <h3>Collares</h3>
+                                <p>Piezas únicas con significado</p>
+                                <p class="price">$35.000</p>
+                            </div>
+                            <button class="add-to-cart">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="cart-modal" class="cart-modal">
+                <div class="cart-content">
+                    <span class="close-cart">&times;</span>
+                    <h2>Tu Carrito</h2>
+                    <div id="cart-items"></div>
+                    <div class="cart-total">
+                        <p>Total: <span id="cart-total-price">$0</span></p>
+                        <button id="checkout-btn">Finalizar Compra</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>&#169; 2.025 De la Paz. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="https://instagram.com/maridelapaz.accesorios" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#C13584">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.148 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.148-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.197-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="https://facebook.com/maridelapaz.accesorios" class="social-icon">
+                        <svg viewBox="0 0 24 24" width="30" height="30" fill="#3b5998">
+                            <path d="M12 0C5.374 0 0 5.374 0 12s5.374 12 12 12 12-5.374 12-12S18.626 0 12 0zm3 8h-1.35c-.538 0-.65.221-.65.778V10h2l-.209 2H13v7h-3v-7H8v-2h2V7.692C10 5.806 11.026 5 12.778 5H15v3z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="animations.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>
